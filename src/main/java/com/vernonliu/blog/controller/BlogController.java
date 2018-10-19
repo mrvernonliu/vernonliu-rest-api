@@ -1,8 +1,8 @@
-package com.vernonliu.gallery.controller;
+package com.vernonliu.blog.controller;
 
-import com.vernonliu.gallery.bean.GalleryHome;
-import com.vernonliu.gallery.bean.GalleryPage;
-import com.vernonliu.gallery.dao.GalleryDAO;
+import com.vernonliu.blog.bean.Blog;
+import com.vernonliu.blog.bean.BlogHome;
+import com.vernonliu.blog.dao.BlogDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,24 +14,25 @@ import java.util.List;
 
 /*
     Author: Vernon Liu
-    REST endpoint for gallery
+    REST endpoint for blogging
  */
 @Controller
-@RequestMapping("/gallery")
-public class GalleryController {
+@RequestMapping(value = "/blog")
+public class BlogController {
 
     @Autowired
-    GalleryDAO galleryDAO;
+    BlogDAO blogDAO;
 
+    //TODO: Implement this
     @ResponseBody
     @RequestMapping(value = "", method = RequestMethod.GET, produces = "application/json")
-    public List<GalleryHome> getAll() {
-        return galleryDAO.findAllProjectedBy();
+    public List<BlogHome> getBlogHome() {
+        return blogDAO.findAllProjectedBy();
     }
 
     @ResponseBody
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public GalleryPage findById(@PathVariable int id) {
-        return galleryDAO.findById(id);
+    public Blog getBlogPost(@PathVariable int id) {
+        return blogDAO.findById(id);
     }
 }
