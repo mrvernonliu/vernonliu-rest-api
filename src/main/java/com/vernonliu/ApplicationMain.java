@@ -14,6 +14,7 @@ public class ApplicationMain {
 
     public static void main(String args[]) {
         SpringApplication.run(ApplicationMain.class, args);
+        System.out.println(System.getenv("DATABASE_HOST"));
     }
 
 }
