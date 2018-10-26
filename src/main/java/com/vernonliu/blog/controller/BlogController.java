@@ -16,6 +16,7 @@ import java.util.List;
     Author: Vernon Liu
     REST endpoint for blogging
  */
+@Deprecated
 @Controller
 @RequestMapping(value = "/blog")
 public class BlogController {
