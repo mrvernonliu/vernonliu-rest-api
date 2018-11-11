@@ -4,3 +4,5 @@
 3. docker build -t mrvernonliu/vernonliu-rest-api:test .
 4. docker run -p 8080:8080 -e DATABASE_HOST=localhost -e DATABASE_NAME=vernonliucom -e DATABASE_PORT=3306 mrvernonliu/vernonliu-rest-api:test
 
+##Pushing to the docker repo
+docker push mrvernonliu/vernonliu-rest-api:latest
