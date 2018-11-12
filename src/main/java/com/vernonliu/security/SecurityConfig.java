@@ -8,11 +8,15 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
-    protected void configure(HttpSecurity httpSecurity) throws Exception{
-        super.configure(httpSecurity);
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        //User the following line for reference to necessary configs
+        //super.configure(httpSecurity);
 
+        httpSecurity.authorizeRequests().antMatchers("/inbox**").authenticated()
+                .and().formLogin()
+                .and().httpBasic();
         httpSecurity.authorizeRequests().anyRequest().permitAll();
-        httpSecurity.httpBasic().disable();
+
         httpSecurity.csrf().disable();
         httpSecurity.cors().disable();
     }
