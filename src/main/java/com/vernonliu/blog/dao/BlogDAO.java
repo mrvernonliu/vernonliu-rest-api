@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
+@Deprecated
 public interface BlogDAO extends JpaRepository<Blog, Long> {
     Blog findById(int id);
     List<BlogHome> findAllProjectedBy();
