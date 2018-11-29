@@ -6,7 +6,6 @@ import com.vernonliu.gallery.dao.GalleryDAO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,7 +35,7 @@ public class GalleryControllerTest {
     MockMvc mvc;
 
     @Mock
-    GalleryDAO galleryDAO = Mockito.mock(GalleryDAO.class);
+    GalleryDAO galleryDAO;
 
     @Mock
     GalleryHome galleryHome;
