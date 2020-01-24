@@ -1,4 +1,4 @@
-package com.vernonliu.blog.bean;
+package com.vernonliu.blog.general.bean;
 
 import java.util.Date;
 

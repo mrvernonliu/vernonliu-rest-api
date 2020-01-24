@@ -1,7 +1,7 @@
-package com.vernonliu.blog.dao;
+package com.vernonliu.blog.general.dao;
 
-import com.vernonliu.blog.bean.Blog;
-import com.vernonliu.blog.bean.BlogHome;
+import com.vernonliu.blog.general.bean.Blog;
+import com.vernonliu.blog.general.bean.BlogHome;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

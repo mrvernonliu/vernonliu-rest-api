@@ -1,8 +1,8 @@
-package com.vernonliu.blog.controller;
+package com.vernonliu.blog.general.controller;
 
-import com.vernonliu.blog.bean.Blog;
-import com.vernonliu.blog.bean.BlogHome;
-import com.vernonliu.blog.dao.BlogDAO;
+import com.vernonliu.blog.general.bean.Blog;
+import com.vernonliu.blog.general.bean.BlogHome;
+import com.vernonliu.blog.general.dao.BlogDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
